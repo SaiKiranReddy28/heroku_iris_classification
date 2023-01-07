@@ -1,0 +1,28 @@
+<h1>
+  Iris Classifier
+</h1>
+<h2>
+  Enter below values in cms
+</h2>
+<form action="/predict" method="post">
+  <label for="sepal_length">Sepal_Length</label>
+  <input type="number" id="sepal_length" name="sepal_length" value="{{request.form['sepal_length']}}" required></input>
+  <br>
+  <label for="sepal_width">Sepal_Width</label>
+   <input type="number" id="sepal_width" name="sepal_width" value="{{request.form['sepal_width']}}" required></input>
+  <br>
+  <label for="petal_length">Petal_Length</label>
+   <input type="number" id="petal_length" name="petal_length" value="{{request.form['petal_length']}}" required ></input>
+  <br>
+  <label for="petal_width">Petal_Width</label>
+   <input type="number" id="petal_width" name="petal_width" value="{{request.form['petal_width']}}" required></input>
+  
+  <br>
+  <input type="submit" value="Submit">
+  
+<br>
+
+<input type="reset">
+</form>
+<br>
+{{prediction_text}}
